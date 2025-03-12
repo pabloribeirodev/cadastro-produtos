@@ -1,7 +1,7 @@
 import { Produto } from './../model/Produto';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-form-produto-component',
@@ -14,5 +14,10 @@ export class FormProdutoComponentComponent {
 
   vetor:Produto[] = [];
 
-  
+ 
+  formulario = new FormGroup({
+    id: new FormControl(null),
+    nome: new FormControl(''),
+    valor: new FormControl(null)
+  })
 }
