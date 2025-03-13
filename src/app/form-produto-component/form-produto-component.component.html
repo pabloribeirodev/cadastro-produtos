@@ -1,20 +1,29 @@
 <form [formGroup]="formulario">
 
-    <input type="number" class="form-control">
-    <input type="text"   class="form-control">
-    <input type="number" class="form-control">
+    <input type="number" class="form-control" formControlName="id" readonly>
+    <input type="text"   class="form-control" formControlName="nome">
+    <input type="number" class="form-control" formControlName="valor">
 
-    <input type="button" value="Cadastrar" class="btn btn-primary">
+    <input type="button" value="Cadastrar" class="btn btn-primary" (click)="cadastrar()">
     <input type="button" value="Alterar"   class="btn btn-primary">
     <input type="button" value="Remover"   class="btn btn-primary">
 
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Nome</th>
-            <th>Valor</th>
-            <th>Selecionar</th>
-        </tr>
-    </thead>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Valor</th>
+                <th>Selecionar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let v of vetor; let indice = index">
+                <td>{{indice+1}}</td>
+                <td>{{v.nome}}</td>
+                <td>{{v.valor}}</td>
+            </tr>
+        </tbody>
+    </table>
 
 </form>
