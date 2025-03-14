@@ -36,11 +36,26 @@ carregarApi(): void {
   });
 }
 
-
   cadastrar(){
     this.servico.cadastrar(this.formulario.value as Produto).subscribe(retorno => {
       this.vetor.push(retorno);
       this.formulario.reset();
     })
   }
+
+  selecionarProduto(indice: number) {
+    if (indice < 0 || indice >= this.vetor.length) {
+      console.error('Índice inválido!');
+      return;
+    }
+  
+    this.formulario.setValue({
+      id: this.vetor[indice].id,
+      nome: this.vetor[indice].nome,
+      valor: this.vetor[indice].valor
+    });
+  }
+  
 }
+
+
