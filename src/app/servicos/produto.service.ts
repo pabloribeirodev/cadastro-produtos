@@ -5,8 +5,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 // Importar o modelo de produto
-
-
 import { Produto } from '../model/Produto';
 
 // Importar o RxJS

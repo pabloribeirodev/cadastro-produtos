@@ -1,0 +1,14 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Galaxy S25",
+      "valor": 5000
+    },
+    {
+      "nome": "iPhone 15",
+      "valor": 7000,
+      "id": 2
+    }
+  ]
+}

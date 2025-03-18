@@ -1,12 +1,14 @@
+
+
 <form [formGroup]="formulario">
 
     <input type="number" class="form-control" formControlName="id" readonly>
     <input type="text"   class="form-control" formControlName="nome" placeholder="Nome">
     <input type="number" class="form-control" formControlName="valor" placeholder="Valor">
 
-    <input type="button" value="Cadastrar" class="btn btn-primary" (click)="cadastrar()">
-    <input type="button" value="Alterar"   class="btn btn-primary">
-    <input type="button" value="Remover"   class="btn btn-primary">
+    <input type="button" value="Cadastrar" class="btn btn-primary" (click)="cadastrar()" *ngIf="btnCadastrar">
+    <input type="button" value="Alterar"   class="btn btn-primary" (click)="alterar()"   *ngIf="!btnCadastrar">
+    <input type="button" value="Remover"   class="btn btn-primary" (click)="remover()"   *ngIf="!btnCadastrar">
 
     <table class="table table-striped">
         <thead>

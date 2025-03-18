@@ -1,7 +1,6 @@
-export class Produto{
-
-    id:number;
+export interface Produto{
+    id:number ;
     nome:string;
     valor:number;
-
+    
 }

@@ -2,7 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
 
-## Development server
+## Configuração do json-server
+
+1. Instale a versão correta:
+   ```bash
+   npm install json-server@0.17.4
+
+   Inicie o servidor:
+
+   json-server --watch db.json
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
